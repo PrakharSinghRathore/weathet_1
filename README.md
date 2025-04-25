@@ -2,6 +2,10 @@
 
 A modern weather application built with React, TypeScript, and Vite. Features a beautiful UI with animations and real-time weather data.
 
+## Deployment
+
+This application is deployed using GitHub Pages. You can access it at: https://prakharsinghrathore.github.io/weathet_1/
+
 ## Features
 
 - Real-time weather data from WeatherAPI.com
