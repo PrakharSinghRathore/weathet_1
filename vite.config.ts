@@ -8,4 +8,9 @@ export default defineConfig({
     allowedHosts: true,
   },
   base: '/weathet_1/',
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
 });
