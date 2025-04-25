@@ -7,4 +7,5 @@ export default defineConfig({
   server: {
     allowedHosts: true,
   },
+  base: '/weathet_1/',
 });
