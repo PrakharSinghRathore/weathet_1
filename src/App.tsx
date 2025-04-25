@@ -63,11 +63,76 @@ export default function App() {
     setError(null);
 
     try {
-      // Add your API calls here
-      // Example:
-      // const weatherResponse = await fetch(`/api/weather?city=${city}`);
-      // const weatherData = await weatherResponse.json();
-      // setWeather(weatherData);
+      // Example weather data (replace with actual API call)
+      const mockWeatherData: WeatherData = {
+        location: {
+          name: city,
+          region: "Region",
+          country: "Country",
+          localtime: new Date().toLocaleString(),
+          lat: 51.5074,
+          lon: -0.1278
+        },
+        current: {
+          temp_c: 20,
+          temp_f: 68,
+          condition: {
+            text: "Partly cloudy",
+            icon: "//cdn.weatherapi.com/weather/64x64/day/116.png"
+          },
+          wind_kph: 10,
+          wind_dir: "N",
+          humidity: 60,
+          feelslike_c: 19,
+          uv: 5
+        }
+      };
+
+      const mockForecastData: ForecastData[] = [
+        {
+          date: "2024-04-26",
+          temperature: 20,
+          description: "Sunny",
+          icon: "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        },
+        {
+          date: "2024-04-27",
+          temperature: 22,
+          description: "Partly cloudy",
+          icon: "//cdn.weatherapi.com/weather/64x64/day/116.png"
+        },
+        {
+          date: "2024-04-28",
+          temperature: 19,
+          description: "Rainy",
+          icon: "//cdn.weatherapi.com/weather/64x64/day/176.png"
+        },
+        {
+          date: "2024-04-29",
+          temperature: 21,
+          description: "Cloudy",
+          icon: "//cdn.weatherapi.com/weather/64x64/day/119.png"
+        },
+        {
+          date: "2024-04-30",
+          temperature: 23,
+          description: "Sunny",
+          icon: "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        }
+      ];
+
+      const mockAirQualityData: AirQualityData = {
+        aqi: 45,
+        pm25: 12,
+        pm10: 20,
+        no2: 15,
+        so2: 5,
+        o3: 30
+      };
+
+      setWeather(mockWeatherData);
+      setForecast(mockForecastData);
+      setAirQuality(mockAirQualityData);
     } catch (err) {
       setError('Failed to fetch weather data');
     } finally {
