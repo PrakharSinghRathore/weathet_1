@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroui/react": "^1.0.0",
     "@iconify/react": "^4.1.0",
     "framer-motion": "^11.0.3",
     "react": "^18.2.0",
