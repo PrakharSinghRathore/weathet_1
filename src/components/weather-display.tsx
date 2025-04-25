@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardBody } from '@heroui/react';
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 
@@ -49,8 +48,8 @@ export const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weather }) => {
         animate={{ opacity: 1, scale: 1 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
       >
-        <Card className="backdrop-blur-sm bg-white/90">
-          <CardBody className="text-center space-y-4">
+        <div className="backdrop-blur-sm bg-white/90 rounded-lg shadow-md p-6">
+          <div className="text-center space-y-4">
             <div className="flex items-center justify-center">
               <img
                 src={`https:${weather.current.condition.icon}`}
@@ -64,11 +63,11 @@ export const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weather }) => {
               </h3>
               <p className="text-gray-600">{weather.current.condition.text}</p>
             </div>
-          </CardBody>
-        </Card>
+          </div>
+        </div>
 
-        <Card className="backdrop-blur-sm bg-white/90">
-          <CardBody className="space-y-4">
+        <div className="backdrop-blur-sm bg-white/90 rounded-lg shadow-md p-6">
+          <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center">
                 <Icon icon="lucide:thermometer" className="mx-auto text-2xl text-blue-500 mb-2" />
@@ -91,8 +90,8 @@ export const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weather }) => {
                 <p className="font-semibold">{weather.current.uv}</p>
               </div>
             </div>
-          </CardBody>
-        </Card>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
