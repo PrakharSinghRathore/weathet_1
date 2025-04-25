@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, useEffect } from "react";
+import React, { useMemo, useCallback } from "react";
 import { Card, CardBody, CardHeader, Spinner, Button, Autocomplete, AutocompleteItem, addToast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";

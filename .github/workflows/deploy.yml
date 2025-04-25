@@ -34,7 +34,9 @@ jobs:
         run: npm ci
       
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          touch ./dist/.nojekyll
         env:
           VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
       
